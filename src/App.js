@@ -115,11 +115,23 @@ function App() {
     <Container maxWidth="lg">
       <header>
         <h1>Do grades</h1>
+        <p>For new items "Add" will add it to the list until you refresh. "Add and Save" will use local storage so the item remains in the list</p>
+        <p><small>you can clear the storage using the button at the bottom of the page</small> </p>
       </header>
-      {pasteString && <h4>Paste this in:</h4>}
+      <div style={{ padding: '12px 6px'}}>
+      {pasteString && <h4>PASTE THE BELOW INTO CANVAS</h4>}
       {pasteString}
-      <hr />
+      </div>
+      <hr/>
       {dataForm()}
+      <div style={{marginTop: '2rem'}}>
+        <button
+          onClick={() => {
+            localStorage.removeItem('grading-criteria')
+          }}>
+          Reset local storage
+        </button>
+      </div>
     </Container>
   );
 }
@@ -182,4 +194,5 @@ const Question = ({testData, section, updateToPaste, setTestData, toPaste}) => {
         </Grid>
       </FormGroup>
     </Box>)
+
 }
