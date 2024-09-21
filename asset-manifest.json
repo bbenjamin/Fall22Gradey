@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gradey-the-grading-helper/static/css/main.073c9b0a.css",
-    "main.js": "/gradey-the-grading-helper/static/js/main.00970251.js",
-    "static/js/787.c469c312.chunk.js": "/gradey-the-grading-helper/static/js/787.c469c312.chunk.js",
-    "index.html": "/gradey-the-grading-helper/index.html",
-    "main.073c9b0a.css.map": "/gradey-the-grading-helper/static/css/main.073c9b0a.css.map",
-    "main.00970251.js.map": "/gradey-the-grading-helper/static/js/main.00970251.js.map",
-    "787.c469c312.chunk.js.map": "/gradey-the-grading-helper/static/js/787.c469c312.chunk.js.map"
+    "main.css": "/Fall22Gradey/static/css/main.073c9b0a.css",
+    "main.js": "/Fall22Gradey/static/js/main.ff9c9406.js",
+    "static/js/787.c469c312.chunk.js": "/Fall22Gradey/static/js/787.c469c312.chunk.js",
+    "index.html": "/Fall22Gradey/index.html",
+    "main.073c9b0a.css.map": "/Fall22Gradey/static/css/main.073c9b0a.css.map",
+    "main.ff9c9406.js.map": "/Fall22Gradey/static/js/main.ff9c9406.js.map",
+    "787.c469c312.chunk.js.map": "/Fall22Gradey/static/js/787.c469c312.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.00970251.js"
+    "static/js/main.ff9c9406.js"
   ]
 }
