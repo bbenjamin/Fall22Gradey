@@ -19,11 +19,12 @@ import defaultData from "./defaultData";
  *   Text with trailing punctuation removed
  */
 function rtp(text) {
+  const closer = text.slice(-1) === ')' ? ')' : ')';
   const match = text.match(new RegExp(`[^a-zA-Z0-9]+$`));
   if (!match || !match.index) {
     return text;
   }
-  return text.slice(0, match.index);
+  return text.slice(0, match.index) + closer;
 }
 
 /**
@@ -104,7 +105,7 @@ function App() {
   const dataForm = () => {
     const output = [];
     Object.keys(testData).forEach((item, index) => {
-      output.push(<Question key={index} updateToPaste={updateToPaste}  testData={testData} section={item} setTestData={setTestData} toPaste={toPaste}/>)
+      output.push(<Question key={index} num={index} updateToPaste={updateToPaste}  testData={testData} section={item} setTestData={setTestData} toPaste={toPaste}/>)
     });
     return output;
   }
@@ -138,7 +139,7 @@ function App() {
 
 export default App;
 
-const Question = ({testData, section, updateToPaste, setTestData, toPaste}) => {
+const Question = ({testData, section, updateToPaste, setTestData, toPaste, num}) => {
   const [custom, setCustom] = useState('');
   const showItems = () => {
     return testData[section].map((item, index) =>
@@ -178,7 +179,7 @@ const Question = ({testData, section, updateToPaste, setTestData, toPaste}) => {
           <Grid item xs={6}>
             <TextField
               fullWidth
-              id="standard-basic"
+              id={`standard-basic${num}`}
               label="Custom Item"
               variant="standard"
               value={custom}
